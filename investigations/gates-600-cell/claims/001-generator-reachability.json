@@ -8,8 +8,12 @@
     "Coordinates mean real,i,j,k; field pairs mean rational a+b*sqrt(5).",
     "Keep antipodal elements distinct (SU(2), not the projective quotient)."
   ],
-  "evidence_records": ["../experiments/run.json"],
-  "independent_reproductions": [],
+  "evidence_records": [
+    "../experiments/run.json"
+  ],
+  "independent_reproductions": [
+    "../reproductions/001/run.json"
+  ],
   "scoped_reviews": [],
   "formal_proofs": [],
   "challenges": [],

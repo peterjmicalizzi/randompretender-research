@@ -3,8 +3,13 @@
   "id": "rp:investigation:gates-600-cell:001",
   "title": "Gate words on the 600-cell",
   "brief": "BRIEF.md",
-  "claim_files": ["claims/001-generator-reachability.json"],
-  "experiment_records": ["experiments/run.json"],
+  "claim_files": [
+    "claims/001-generator-reachability.json"
+  ],
+  "experiment_records": [
+    "experiments/run.json",
+    "reproductions/001/run.json"
+  ],
   "site_url": "https://randompretender.com/",
   "site_snapshot": null,
   "revision_convention": "Cite this ID with the full Git commit SHA. No immutable site environment is attached.",
