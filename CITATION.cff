@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: Cite the individual contribution and exact commit as well as this library. This record does not imply that the owner authored or verified every contribution.
+title: Random Pretender Research Library
+type: dataset
+authors:
+  - family-names: Micalizzi
+    given-names: Peter
+repository-code: https://github.com/peterjmicalizzi/randompretender-research
+url: https://github.com/peterjmicalizzi/randompretender-research

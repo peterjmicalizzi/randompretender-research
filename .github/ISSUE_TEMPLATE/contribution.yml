@@ -1,0 +1,27 @@
+name: Question, observation, or proposal
+description: Start with one sentence; add context if you have it.
+labels: [contribution]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What would you like to contribute?
+      options:
+        - Question
+        - Observation or result
+        - Feature or investigation proposal
+        - Explanation or reference
+    validations:
+      required: true
+  - type: textarea
+    id: contribution
+    attributes:
+      label: Your contribution
+      description: One sentence is enough to begin. Add reasoning if you have it.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context (optional)
+      description: Investigation, site link, revision, or exported packet. Only share material you can make public; no credentials or private conversations.

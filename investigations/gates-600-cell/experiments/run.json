@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "rp:execution:2i-words:001",
+  "experiment_id": "rp:experiment:2i-words:001",
+  "object_id": "rp:object:2i-coordinate-presentation:001",
+  "execution_kind": "local-single-implementation",
+  "recorded_at_utc": "2026-09-12T15:20:33.693381+00:00",
+  "runtime": {
+    "python": "3.13.3",
+    "implementation": "CPython",
+    "os": "Windows",
+    "architecture": "AMD64",
+    "dependencies": "Python standard library only"
+  },
+  "command": "python investigations/gates-600-cell/experiments/enumerate_2i.py",
+  "artifacts": [
+    {
+      "path": "enumerate_2i.py",
+      "sha256": "4239023973f8b3eaeece186ec4491ff652726c2e12aeb14e7fc828ae156b2d79"
+    },
+    {
+      "path": "result.json",
+      "sha256": "c588ed632246a0df720c37a4a1bf53bc72660192630c1caa4e24f2c2834bcd09"
+    }
+  ],
+  "checks_reported": [
+    "120 distinct vertices",
+    "exact norm one",
+    "exact inverse membership and product",
+    "all 14400 ordered products remain in vertex set",
+    "all vertices reached",
+    "every recorded word replays to its endpoint"
+  ],
+  "independence": "Not independently reproduced. Internal checks use the same quaternion implementation.",
+  "review": "No scoped human review or Lean proof attached.",
+  "source_revision": "Initial library commit containing these artifact hashes; cite the full commit SHA after publication.",
+  "site_execution": false
+}

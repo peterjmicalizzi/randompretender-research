@@ -1,0 +1,23 @@
+name: Reproduction or scoped review
+description: Record exactly what you checked and what you did not.
+labels: [review]
+body:
+  - type: textarea
+    id: target
+    attributes:
+      label: Work reviewed
+      description: Link the claim, experiment or PR and its exact revision when available.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Assessment and scope
+      description: What did you check, what did you not check, and what did you find? Only claim your own assessment.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction details (optional)
+      description: Implementation, environment, comparison and actual result. Re-running the same script is replay, not independent implementation.

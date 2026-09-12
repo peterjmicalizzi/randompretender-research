@@ -1,0 +1,16 @@
+name: Challenge or counterexample
+description: Identify the statement and explain the objection.
+labels: [challenge]
+body:
+  - type: textarea
+    id: challenge
+    attributes:
+      label: What claim are you challenging, and why?
+      description: A sentence and a link are enough to start. A proposed counterexample is not yet a checked refutation.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and conditions (optional)
+      description: Include the revision, settings, site link or calculation if available. Do not attach secrets or private material.

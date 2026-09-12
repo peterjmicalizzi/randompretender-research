@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Explore the laboratory
+    url: https://randompretender.com/
+    about: Open the interactive site. This link does not preserve a historical application build.
+  - name: Report a security vulnerability privately
+    url: https://github.com/peterjmicalizzi/randompretender-research/security/advisories/new
+    about: Do not publish credentials or exploit details in an issue.
