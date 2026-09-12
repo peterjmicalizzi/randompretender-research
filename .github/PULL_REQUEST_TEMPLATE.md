@@ -12,7 +12,8 @@ Authors, assisting tools, references, and starting revision:
 
 ## Publication check
 
-- [ ] I have the right to share these files under the repository's stated licensing policy.
+- [ ] I have the right to share these files under the repository's licensing policy (Apache 2.0 for code, CC BY 4.0 for content), and I have identified any third-party material and its licence.
+- [ ] Every commit carries my own `Signed-off-by` line under the Developer Certificate of Origin.
 - [ ] No credentials, private data, deployment connections, or automated execution are introduced.
 - [ ] I distinguish inclusion in the library from mathematical verification.
 

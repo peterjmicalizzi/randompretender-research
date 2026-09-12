@@ -10,4 +10,5 @@ This repository is public research context, not the application checkout. Read R
 - Before committing, review the full diff and run `python tools/validate_library.py`. This is a data consistency check, not a mathematical certificate. Review validator changes before executing them.
 - Cite exactly what evidence establishes. Do not assign unsupported validity labels, fabricate reviewer identities, or infer endorsement from a merge or reaction.
 - Every commit should include a Co-Authored-By trailer identifying the assisting model where applicable. Preserve human and source attribution.
+- A `Signed-off-by` line is a person's own attestation under the Developer Certificate of Origin. Never add one on someone's behalf unless they have explicitly instructed you to, with the exact name and email to use, and never treat a Co-Authored-By trailer as a sign-off.
 - No application build or deploy belongs in this repository. Changes here never authorize changes to the live site.
