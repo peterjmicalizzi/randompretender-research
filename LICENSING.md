@@ -62,14 +62,18 @@ attribution, not a sign-off.
 Employer-owned work needs the employer's permission before it is contributed. If you are
 unsure whether you hold the rights, ask before opening the pull request rather than after.
 
-## Attribution
+## Citation and licence compliance
 
-CC BY 4.0 and Apache 2.0 both require attribution. For this library, attribution is
-satisfied by citing the repository URL, the full commit SHA, and the record ID or file path
-as described in [`docs/EVIDENCE.md`](docs/EVIDENCE.md). The licences attach to the written
-presentation of the work. They do not, and cannot, make a mathematical fact require
-attribution, which is why the contribution records, reviews and citations in this library
-carry the credit chain rather than the licence alone.
+For scholarly citation, use the repository URL, the full commit SHA, and the record ID or
+file path, as described in [`docs/EVIDENCE.md`](docs/EVIDENCE.md). Citation is not licence
+compliance. Also comply with the applicable licence's notice, attribution and modification
+requirements: Apache 2.0 requires that redistributed code keeps the licence and any
+applicable notices and that modified files are marked as changed; CC BY 4.0 requires credit
+to the source, a link to the licence, and an indication of any changes made.
+
+The licences attach to the written presentation of the work. They do not, and cannot, make
+a mathematical fact require attribution, which is why the contribution records, reviews
+and citations in this library carry the credit chain rather than the licence alone.
 
 ## Effective date and earlier copies
 
