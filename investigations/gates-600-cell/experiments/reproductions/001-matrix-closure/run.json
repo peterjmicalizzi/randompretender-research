@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "rp:execution:2i-words-matrix-closure:001",
+  "experiment_id": "rp:experiment:2i-words:001",
+  "object_id": "rp:object:2i-coordinate-presentation:001",
+  "execution_kind": "independent-reproduction",
+  "reproduces": "rp:execution:2i-words:001",
+  "reproduces_at_commit": "7ee2ee0ed85c84a716a8b9b7da72cf19186f6774",
+  "recorded_at_utc": "2026-09-12T15:52:32.523613+00:00",
+  "runtime": {
+    "python": "3.13.3",
+    "implementation": "CPython",
+    "os": "Windows",
+    "architecture": "AMD64",
+    "dependencies": "Python standard library only"
+  },
+  "command": "python investigations/gates-600-cell/experiments/reproductions/001-matrix-closure/reproduce_2i_matrices.py",
+  "artifacts": [
+    {
+      "path": "reproduce_2i_matrices.py",
+      "sha256": "1e70f450ba2f4b64a3879fa5b250ab1fd80848b539e0948bcf03e2f6a97c0756"
+    },
+    {
+      "path": "report.json",
+      "sha256": "81741f6e81a0960f675e63efeabe4fcd00dd5c5975f88ee6f7c1689f08aee779"
+    },
+    {
+      "path": "REPRODUCTION.md",
+      "sha256": "ad9ed029ac19b90702510f9349d4fa90c995fb4b42e5410fb8882bc98a4f8c4c"
+    }
+  ],
+  "compared_against": {
+    "path": "../../result.json",
+    "sha256": "c588ed632246a0df720c37a4a1bf53bc72660192630c1caa4e24f2c2834bcd09"
+  },
+  "method": "closure of <a,b> under 2x2 matrix multiplication over Q(sqrt5)(i)",
+  "comparison": "Closure of <a,b> under 2x2 matrix multiplication over Q(sqrt5)(i) compared with the recorded coordinate set under the brief's matrix map; the map checked as a homomorphism on all 14400 ordered pairs against an independently written Hamilton product; BFS shortest-word distances and histogram compared per vertex; every recorded word replayed to its endpoint and checked minimal.",
+  "checks_reported": [
+    "generators are special unitary (det 1, dagger is inverse)",
+    "generators match the record",
+    "closure of <a,b> has exactly 120 elements",
+    "closure is closed under inverse",
+    "all 14400 ordered products stay in the closure",
+    "every element has det 1",
+    "record lists 120 distinct coordinates",
+    "closure equals the recorded coordinate set",
+    "the record keeps q and -q distinct (SU(2), not the projective quotient)",
+    "matrix product agrees with the Hamilton product on all 14400 ordered pairs (map is a homomorphism)",
+    "all 120 elements are reached by the alphabet a,A,b,B",
+    "shortest-word-length histogram matches the record",
+    "maximum shortest word length matches",
+    "every recorded word replays to its recorded endpoint (right multiplication, written order)",
+    "every recorded word has the minimal length for its endpoint",
+    "the recorded collision aA = identity holds"
+  ],
+  "checks_passed": 16,
+  "checks_total": 16,
+  "reproduced": true,
+  "runtime_seconds": 3.364,
+  "shared_dependencies": [
+    "Q(sqrt5) arithmetic on Fraction pairs is exact; both implementations rely on that.",
+    "The brief's matrix correspondence is taken as the definition of the matrix side; it is then checked to be a homomorphism.",
+    "Generators, conventions and coordinate encoding are read from the brief and the record, so an error in those definitions would be shared.",
+    "Both implementations were produced by AI assistants under the direction of the same person; the implementations and models are independent, the direction is not."
+  ],
+  "independence": "Different construction (generator closure, not a coordinate list), different group operation (matrix product, not the quaternion formula), different model (Claude Fable 5.1, not Codex). Same human direction, same exact-arithmetic assumption, same definitions read from the brief.",
+  "review": "No scoped human review or Lean proof attached.",
+  "line_endings_note": "Recorded hashes are of LF output. On Windows, stdout redirected to a file gains CRLF and the raw hash differs until normalised; the JSON content is identical.",
+  "site_execution": false
+}

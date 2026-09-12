@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "check": "generators are special unitary (det 1, dagger is inverse)",
+      "passed": true
+    },
+    {
+      "check": "generators match the record",
+      "passed": true
+    },
+    {
+      "check": "closure of <a,b> has exactly 120 elements",
+      "detail": "120",
+      "passed": true
+    },
+    {
+      "check": "closure is closed under inverse",
+      "passed": true
+    },
+    {
+      "check": "all 14400 ordered products stay in the closure",
+      "passed": true
+    },
+    {
+      "check": "every element has det 1",
+      "passed": true
+    },
+    {
+      "check": "record lists 120 distinct coordinates",
+      "passed": true
+    },
+    {
+      "check": "closure equals the recorded coordinate set",
+      "passed": true
+    },
+    {
+      "check": "the record keeps q and -q distinct (SU(2), not the projective quotient)",
+      "passed": true
+    },
+    {
+      "check": "matrix product agrees with the Hamilton product on all 14400 ordered pairs (map is a homomorphism)",
+      "passed": true
+    },
+    {
+      "check": "all 120 elements are reached by the alphabet a,A,b,B",
+      "passed": true
+    },
+    {
+      "check": "shortest-word-length histogram matches the record",
+      "detail": "mine {0: 1, 1: 4, 2: 12, 3: 25, 4: 24, 5: 24, 6: 18, 7: 10, 8: 2} record {0: 1, 1: 4, 2: 12, 3: 25, 4: 24, 5: 24, 6: 18, 7: 10, 8: 2}",
+      "passed": true
+    },
+    {
+      "check": "maximum shortest word length matches",
+      "detail": "8 vs 8",
+      "passed": true
+    },
+    {
+      "check": "every recorded word replays to its recorded endpoint (right multiplication, written order)",
+      "passed": true
+    },
+    {
+      "check": "every recorded word has the minimal length for its endpoint",
+      "passed": true
+    },
+    {
+      "check": "the recorded collision aA = identity holds",
+      "passed": true
+    }
+  ],
+  "compared_result_sha256": "c588ed632246a0df720c37a4a1bf53bc72660192630c1caa4e24f2c2834bcd09",
+  "histogram": {
+    "0": 1,
+    "1": 4,
+    "2": 12,
+    "3": 25,
+    "4": 24,
+    "5": 24,
+    "6": 18,
+    "7": 10,
+    "8": 2
+  },
+  "id": "rp:reproduction-report:2i-words-matrix-closure:001",
+  "method": "closure of <a,b> under 2x2 matrix multiplication over Q(sqrt5)(i)",
+  "python": "3.13.3",
+  "reproduced": true,
+  "reproduces": "rp:execution:2i-words:001",
+  "runtime_seconds": 3.364,
+  "schema_version": 1,
+  "shared_assumptions": [
+    "Q(sqrt5) arithmetic on Fraction pairs is exact; both implementations rely on that.",
+    "The brief's matrix correspondence is taken as the definition of the matrix side; it is then checked to be a homomorphism.",
+    "Generators, conventions and coordinate encoding are read from the brief and the record, so an error in those definitions would be shared.",
+    "Both implementations were produced by AI assistants under the direction of the same person; the implementations and models are independent, the direction is not."
+  ]
+}

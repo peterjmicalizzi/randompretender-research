@@ -47,19 +47,29 @@ def validate(root=ROOT):
         ids.add(workspace['id'])
         safe_file(root,path.parent,workspace['brief'])
         known_runs = {}
+        known_ids = {}
         for ref in workspace['experiment_records']:
             record_path = safe_file(root,path.parent,ref)
             record = read_json(record_path)
             require(record.get('schema_version') == 1, 'Unknown execution schema')
             require(record['id'] not in ids, 'Duplicate execution ID')
             ids.add(record['id'])
-            require(record.get('execution_kind') == 'local-single-implementation', 'Unexpected starter evidence kind')
+            kind = record.get('execution_kind')
+            require(kind in ('local-single-implementation', 'independent-reproduction'), f'Unexpected evidence kind: {kind}')
+            if kind == 'independent-reproduction':
+                # A reproduction names the execution it reproduces, which must be listed earlier
+                # in the workspace, and states what the two runs share. Neither field is a
+                # verdict: the validator checks that the record is complete, not that it is right.
+                require(record.get('reproduces') in known_ids, 'Reproduction does not name a listed execution')
+                require(record.get('shared_dependencies'), 'Reproduction must state shared dependencies')
+                require(record.get('comparison'), 'Reproduction must state what was compared')
             for artifact in record['artifacts']:
                 file = safe_file(root,record_path.parent,artifact['path'])
                 actual = hashlib.sha256(file.read_bytes()).hexdigest()
                 require(actual == artifact['sha256'], f'Artifact checksum mismatch: {file.name}')
             require(record.get('runtime') and record.get('recorded_at_utc'), 'Missing execution context')
             known_runs[record_path] = record
+            known_ids[record['id']] = record
         for ref in workspace['claim_files']:
             claim_path = safe_file(root,path.parent,ref)
             claim = read_json(claim_path)
@@ -74,6 +84,11 @@ def validate(root=ROOT):
                 require(known_runs[run_path]['object_id'] == claim['object_id'], 'Claim/evidence object mismatch')
             for field in ('independent_reproductions','scoped_reviews','formal_proofs','challenges'):
                 require(isinstance(claim.get(field),list), f'Missing evidence list: {field}')
+            for ref in claim['independent_reproductions']:
+                run_path = safe_file(root,claim_path.parent,ref)
+                require(run_path in known_runs, 'Reproduction not listed by workspace')
+                require(known_runs[run_path].get('execution_kind') == 'independent-reproduction', 'Listed reproduction is not a reproduction record')
+                require(known_runs[run_path]['object_id'] == claim['object_id'], 'Claim/reproduction object mismatch')
     return len(manifests), len(ids)
 
 
