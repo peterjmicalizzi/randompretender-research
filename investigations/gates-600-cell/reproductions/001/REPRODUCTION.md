@@ -29,7 +29,8 @@ This reproduction reaches the same result by a different construction, working f
 - The recorded collision `aA = identity` holds.
 
 Sixteen checks, all passed. The script, its JSON report and the execution record are in
-this directory. Replaying the starter script itself also reproduces `result.json` exactly.
+this directory, `investigations/gates-600-cell/reproductions/001/`. Replaying the starter
+script itself also reproduces `result.json` exactly.
 
 ## What was not checked
 
@@ -50,11 +51,13 @@ A reviewer weighing this reproduction should know what the two runs have in comm
   the brief and the record. An error in those definitions would be shared, not detected.
 - The brief's matrix correspondence is taken as the definition of the matrix side and then
   checked to be a homomorphism; it is not derived independently.
-- **Both implementations were produced by AI assistants under the direction of the same
-  person.** The starter was prepared with Codex (GPT-6); this reproduction was prepared
-  with Claude Fable 5.1. The implementations and the models are independent. The human
-  direction is not. A reproduction by someone outside the project remains the open task
-  the brief lists, and this record does not close it.
+- **Separately implemented using matrix multiplication and generator closure, with
+  different AI tools under the same human direction.** The starter was prepared with
+  Codex (GPT-6); this reproduction with Claude Fable 5.1. Different tools do not
+  establish independent reasoning or uncorrelated errors. The shared definitions and
+  arithmetic dependencies are the items above. External reproduction remains open: a
+  reproduction by someone outside the project is the task the brief lists, and this
+  record does not close it.
 
 ## Environment
 

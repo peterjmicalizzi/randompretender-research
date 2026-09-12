@@ -12,7 +12,7 @@
     "../experiments/run.json"
   ],
   "independent_reproductions": [
-    "../experiments/reproductions/001-matrix-closure/run.json"
+    "../reproductions/001/run.json"
   ],
   "scoped_reviews": [],
   "formal_proofs": [],

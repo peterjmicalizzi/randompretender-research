@@ -85,12 +85,12 @@
   "python": "3.13.3",
   "reproduced": true,
   "reproduces": "rp:execution:2i-words:001",
-  "runtime_seconds": 3.364,
+  "runtime_seconds": 3.378,
   "schema_version": 1,
   "shared_assumptions": [
     "Q(sqrt5) arithmetic on Fraction pairs is exact; both implementations rely on that.",
     "The brief's matrix correspondence is taken as the definition of the matrix side; it is then checked to be a homomorphism.",
     "Generators, conventions and coordinate encoding are read from the brief and the record, so an error in those definitions would be shared.",
-    "Both implementations were produced by AI assistants under the direction of the same person; the implementations and models are independent, the direction is not."
+    "Separately implemented using matrix multiplication and generator closure, with different AI tools under the same human direction. Different tools do not establish independent reasoning or uncorrelated errors. External reproduction remains open."
   ]
 }

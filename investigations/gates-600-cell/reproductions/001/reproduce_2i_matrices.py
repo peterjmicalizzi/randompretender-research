@@ -22,7 +22,7 @@ implementation rather than a replay:
 Python 3.10+, standard library only. No network, no subprocesses, no file writes; the
 report is JSON on stdout. Exit status 0 when every check passes, 1 otherwise.
 
-    python investigations/gates-600-cell/experiments/reproductions/001-matrix-closure/reproduce_2i_matrices.py
+    python investigations/gates-600-cell/reproductions/001/reproduce_2i_matrices.py
 
 An optional argument names a different result.json to compare against.
 """
@@ -158,11 +158,11 @@ def main(result_path):
         'Q(sqrt5) arithmetic on Fraction pairs is exact; both implementations rely on that.',
         "The brief's matrix correspondence is taken as the definition of the matrix side; it is then checked to be a homomorphism.",
         'Generators, conventions and coordinate encoding are read from the brief and the record, so an error in those definitions would be shared.',
-        'Both implementations were produced by AI assistants under the direction of the same person; the implementations and models are independent, the direction is not.',
+        'Separately implemented using matrix multiplication and generator closure, with different AI tools under the same human direction. Different tools do not establish independent reasoning or uncorrelated errors. External reproduction remains open.',
     ]
     print(json.dumps(report, indent=2, sort_keys=True))
     return 0 if report['reproduced'] else 1
 
 if __name__ == '__main__':
-    default = Path(__file__).resolve().parents[2] / 'result.json'
+    default = Path(__file__).resolve().parents[2] / 'experiments' / 'result.json'
     sys.exit(main(sys.argv[1] if len(sys.argv) > 1 else default))

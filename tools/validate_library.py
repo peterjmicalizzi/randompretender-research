@@ -61,6 +61,13 @@ def validate(root=ROOT):
                 # in the workspace, and states what the two runs share. Neither field is a
                 # verdict: the validator checks that the record is complete, not that it is right.
                 require(record.get('reproduces') in known_ids, 'Reproduction does not name a listed execution')
+                original = known_ids[record['reproduces']]
+                require(record.get('object_id') == original.get('object_id'), 'Reproduction object differs from the reproduced execution')
+                compared = record.get('compared_against') or {}
+                compared_file = safe_file(root, record_path.parent, compared.get('path'))
+                original_hashes = {a['sha256'] for a in original['artifacts']}
+                require(compared.get('sha256') in original_hashes, 'Reproduction comparison artifact is not a recorded artifact of the reproduced execution')
+                require(hashlib.sha256(compared_file.read_bytes()).hexdigest() == compared['sha256'], 'Reproduction comparison artifact checksum mismatch')
                 require(record.get('shared_dependencies'), 'Reproduction must state shared dependencies')
                 require(record.get('comparison'), 'Reproduction must state what was compared')
             for artifact in record['artifacts']:

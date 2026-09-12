@@ -8,7 +8,7 @@
   ],
   "experiment_records": [
     "experiments/run.json",
-    "experiments/reproductions/001-matrix-closure/run.json"
+    "reproductions/001/run.json"
   ],
   "site_url": "https://randompretender.com/",
   "site_snapshot": null,
