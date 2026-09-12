@@ -6,4 +6,7 @@ authors:
   - family-names: Micalizzi
     given-names: Peter
 repository-code: https://github.com/peterjmicalizzi/randompretender-research
+license:
+  - Apache-2.0
+  - CC-BY-4.0
 url: https://github.com/peterjmicalizzi/randompretender-research

@@ -16,8 +16,9 @@ Link the statement you challenge and explain why. Include the exact revision and
 2. Record the starting upstream commit. Use the current investigation's conventions or explicitly state changes.
 3. Add the smallest useful explanation and evidence. Use `templates/contribution.md` if helpful; there is no requirement to fill a large form to start.
 4. For a new claim or run use a new ID; preserve older evidence. Corrections link to the original rather than silently replacing its meaning.
-5. Open a pull request explaining what is new, what was checked, and any unresolved question. Credit authors, tools, prior work, and scoped reviewers. Do not claim that an AI is an independent mathematical reviewer.
-6. The maintainer reviews the actual diff and decides whether to merge. Admission to the library means the contribution was accepted into the record, not that every mathematical claim was endorsed.
+5. Sign off every commit (`git commit -s`). The sign-off is your own statement, under the [Developer Certificate of Origin](DCO.txt), that you have the right to contribute the work under the library's licences. A tool cannot make it for you.
+6. Open a pull request explaining what is new, what was checked, and any unresolved question. Credit authors, tools, prior work, and scoped reviewers. Do not claim that an AI is an independent mathematical reviewer.
+7. The maintainer reviews the actual diff and decides whether to merge. Admission to the library means the contribution was accepted into the record, not that every mathematical claim was endorsed.
 
 Prefer readable Markdown, JSON, Python, or Lean source. Keep individual files below 2 MB for this initial library. Link large artifacts to immutable releases with hashes and retention details; do not use executable archives, symlinks, submodules, or committed runtime environments. Reference papers by stable links rather than copying their PDFs or text without permission.
 
@@ -35,4 +36,4 @@ Issue, comment, and PR authorship is preserved by GitHub. Cite a scoped review u
 
 ## Licensing
 
-Read `LICENSING.md` before contributing. Do not submit third-party material under a license you cannot grant. Any future dual-license policy must be explicit; it cannot silently relicense earlier contributions.
+Code is contributed under the Apache License 2.0 and everything else under CC BY 4.0, on the same terms you received them (inbound = outbound). You keep your copyright. Every commit carries a Developer Certificate of Origin sign-off. Read [`LICENSING.md`](LICENSING.md) before contributing, and do not submit third-party material under a licence you cannot grant. Any later change to this policy must be explicit and cannot silently relicense earlier contributions.

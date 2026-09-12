@@ -43,4 +43,8 @@ GitHub issue/PR URLs identify contributions. A repository-relative record ID ide
 
 This is a new repository with a fresh history, separate from the private application repository. It contains no production source, server credentials, deployment hooks, or access to the live server. GitHub Actions are disabled. Submitted scripts and Lean files do not run automatically. Opening or merging an issue/PR does not deploy anything or certify a result.
 
+## Licence
+
+Code is under the [Apache License 2.0](LICENSES/Apache-2.0.txt); briefs, records, data and other content are under [CC BY 4.0](LICENSES/CC-BY-4.0.txt). Contributions are accepted on the same terms with a [Developer Certificate of Origin](DCO.txt) sign-off. Details, file-type rules and exceptions are in [LICENSING.md](LICENSING.md). The private application is licensed separately.
+
 [Permissions and governance](docs/GOVERNANCE.md) · [Evidence and attribution](docs/EVIDENCE.md) · [Security](SECURITY.md) · [Licensing](LICENSING.md) · [Next integration steps](docs/ROADMAP.md)
